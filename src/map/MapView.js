@@ -19,8 +19,6 @@ const styles = StyleSheet.create({
 })
 
 const MapsView = React.createClass({
-  mixins: [Mapbox.Mixin],
-
   propTypes: {
     center: PropTypes.object.isRequired,
     selectedEvent: PropTypes.object,
@@ -36,18 +34,15 @@ const MapsView = React.createClass({
     Mapbox.setAccessToken(mapBoxAccessToken)
   },
 
-  componentDidMount () {
-    this._map.setZoomLevel(this.props.zoomLevel)
-  },
-
   render () {
     return (
       <MapView
         ref={map => this._map = map}
+        initialZoomLevel={this.props.zoomLevel}
         initialCenterCoordinate={this.props.center}
         style={styles.container}
         styleURL={Mapbox.mapStyles.satellite}
-        // annotations={this._getDisplayAnnotations()}
+        annotations={this._getDisplayAnnotations()}
         showsUserLocation
       />
     )
@@ -55,6 +50,7 @@ const MapsView = React.createClass({
 
   _getDisplayAnnotations () {
     let eventAnnotations = []
+
     if (this.props.selectedEvent) {
       const filteredEventAnnotations = this._filterEventAnnotations()
       return filteredEventAnnotations
@@ -74,7 +70,10 @@ const MapsView = React.createClass({
     const foundEventAnnotation = this.props.annotations.find(event => {
       return event.id === this.props.selectedEvent.id
     })
-    return [foundEventAnnotation]
+    if (foundEventAnnotation) {
+      return [foundEventAnnotation]
+    }
+    return []
   }
 })
 
