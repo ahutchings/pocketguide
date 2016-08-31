@@ -1,7 +1,5 @@
-import React, {
-  StyleSheet,
-  PropTypes
-} from 'react-native'
+import React, {PropTypes} from 'react';
+import {StyleSheet} from 'react-native';
 import {connect} from 'react-redux'
 import Mapbox from 'react-native-mapbox-gl'
 

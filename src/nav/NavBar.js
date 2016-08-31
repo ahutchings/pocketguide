@@ -1,7 +1,7 @@
 import MapNavBar from './MapNavBar'
 import PrinciplesNavBar from './PrinciplesNavBar'
 import EventsNavBar from './EventsNavBar'
-import React from 'react-native'
+import React from 'react';
 
 export default React.createClass({
   propTypes: {

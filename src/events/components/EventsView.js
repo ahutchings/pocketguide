@@ -1,10 +1,5 @@
-import React, {
-  View,
-  ListView,
-  Text,
-  TouchableOpacity,
-  PropTypes
-} from 'react-native'
+import React, {PropTypes} from 'react';
+import {View, ListView, Text, TouchableOpacity} from 'react-native';
 import {GENERAL_FONT, BORDER} from '../../styles/ColorConstants'
 
 const styles = {

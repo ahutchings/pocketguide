@@ -1,8 +1,5 @@
-import React, {
-  ScrollView,
-  Text,
-  Image
-} from 'react-native'
+import React from 'react';
+import {ScrollView, Text, Image} from 'react-native';
 import tenPrinciples from '../../images/principles/Ten_Principles.png'
 import styles from '../styles/PrinciplesViewStyles'
 
