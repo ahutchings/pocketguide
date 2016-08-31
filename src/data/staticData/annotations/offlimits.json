@@ -36,7 +36,7 @@
       ]
     ],
     "type": "polygon",
-    "name": "Burn Field - NO CAMPING",
+    "title": "Burn Field - NO CAMPING",
     "strokeWidth": 5,
     "fillColor": "#FF0000"
   },
@@ -65,7 +65,7 @@
       ]
     ],
     "type": "polygon",
-    "name": "Marsh - DO NOT USE",
+    "title": "Marsh - DO NOT USE",
     "strokeWidth": 5,
     "fillColor": "#FF0000"
   },
@@ -94,7 +94,7 @@
       ]
     ],
     "type": "polygon",
-    "name": "Marsh - DO NOT USE",
+    "title": "Marsh - DO NOT USE",
     "strokeWidth": 5,
     "fillColor": "#FF0000"
   },
@@ -127,7 +127,7 @@
       ]
     ],
     "type": "polygon",
-    "name": "Downtown - NO CAMPING",
+    "title": "Downtown - NO CAMPING",
     "strokeWidth": 5,
     "fillColor": "#ff0080"
   },
@@ -156,7 +156,7 @@
       ]
     ],
     "type": "polygon",
-    "name": "Euphoria Parking",
+    "title": "Euphoria Parking",
     "strokeWidth": 5,
     "fillColor": "#FF0000"
   }

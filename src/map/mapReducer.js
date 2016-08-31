@@ -62,12 +62,14 @@ function buildEventAnnotations (events) {
     .filter(event => event && event.coordinates)
     .map(event => {
       return {
-        id: event.id,
+        id: `${event.id}`,
         type: 'point',
         title: event.name,
         coordinates: event.coordinates,
         annotationImage: {
-          url: 'image!pin',
+          source: {
+            uri: 'pin'
+          },
           width: 30,
           height: 70
         }

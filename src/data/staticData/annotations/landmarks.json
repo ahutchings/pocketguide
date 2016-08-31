@@ -8,7 +8,7 @@
     ],
     "type": "point",
     "annotationImage": {
-      "url": "image!effigy_pin",
+      "source": {"uri": "effigy_pin"},
       "width": 44,
       "height": 44
     }
@@ -22,7 +22,7 @@
     ],
     "type": "point",
     "annotationImage": {
-      "url": "image!temple_pin",
+      "source": {"uri": "temple_pin"},
       "width": 44,
       "height": 44
     }
