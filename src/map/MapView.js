@@ -1,9 +1,9 @@
-import React, {PropTypes} from 'react';
-import {StyleSheet} from 'react-native';
+import React, {PropTypes} from 'react'
+import {StyleSheet} from 'react-native'
 import {connect} from 'react-redux'
-import Mapbox from 'react-native-mapbox-gl'
+import Mapbox, {MapView} from 'react-native-mapbox-gl'
 
-const mapRef = 'map'
+const mapBoxAccessToken = 'pk.eyJ1IjoiY2hlZjA5OCIsImEiOiJjaWtwcjlocDQxMzZzdXhrbXE5NXp3bmViIn0.F9CMetNmIS4woy5gK1O3Ug'
 
 const styles = StyleSheet.create({
   container: {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   }
 })
 
-const MapView = React.createClass({
+const MapsView = React.createClass({
   mixins: [Mapbox.Mixin],
 
   propTypes: {
@@ -32,24 +32,23 @@ const MapView = React.createClass({
     openAnnotation: PropTypes.func.isRequired
   },
 
+  componentWillMount () {
+    Mapbox.setAccessToken(mapBoxAccessToken)
+  },
+
+  componentDidMount () {
+    this._map.setZoomLevel(this.props.zoomLevel)
+  },
+
   render () {
     return (
-      <Mapbox
-        ref={mapRef}
+      <MapView
+        ref={map => this._map = map}
+        initialCenterCoordinate={this.props.center}
         style={styles.container}
-        styleURL={this.mapStyles.satellite}
-        zoomLevel={this.props.zoomLevel}
-        direction={0}
-        accessToken={'pk.eyJ1IjoiY2hlZjA5OCIsImEiOiJjaWtwcjlocDQxMzZzdXhrbXE5NXp3bmViIn0.F9CMetNmIS4woy5gK1O3Ug'}
-        annotations={this._getDisplayAnnotations()}
-        zoomEnabled
-        logoIsHidden
-        rotateEnabled
-        centerCoordinate={this.props.center}
-        userTrackingMode={this.userTrackingMode.none}
+        styleURL={Mapbox.mapStyles.satellite}
+        // annotations={this._getDisplayAnnotations()}
         showsUserLocation
-        attributionButtonIsHidden={false}
-        onOpenAnnotation={this.props.openAnnotation}
       />
     )
   },
@@ -94,4 +93,4 @@ function mapDispatchToProps (dispatch) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MapView)
+export default connect(mapStateToProps, mapDispatchToProps)(MapsView)
