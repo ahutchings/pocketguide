@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "test": "mocha",
-    "build:map-data": "node scripts/exportKMLToAnnotations.js",
-    "build:android": "cd android && ./gradlew assembleRelease && cd ../",
-    "install:release-android": "cd android && ./gradlew installRelease && cd ../",
-    "clean:android": "cd android && ./gradlew clean && cd ../",
+    "map-data:build": "node scripts/exportKMLToAnnotations.js",
+    "android:build": "cd android && ./gradlew assembleRelease && cd ../",
+    "android:install-release": "cd android && ./gradlew installRelease && cd ../",
+    "android:clean": "cd android && ./gradlew clean && cd ../",
     "start": "react-native run-android",
-    "reset:react-native": "react-native start --reset-cache"
+    "react-native:reset": "react-native start --reset-cache"
   },
   "dependencies": {
     "events": "^1.1.0",
