@@ -2,6 +2,8 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux'
 import EventsView from './EventsView'
 import EventView from './EventView'
+import {ActivityIndicator, View, Text} from 'react-native';
+import styles from '../../styles/EventViewStyles'
 
 const EventsContainerView = React.createClass({
   propTypes: {
@@ -22,10 +24,25 @@ const EventsContainerView = React.createClass({
         event={this.props.selectedEvent}
       />
     }
-    return <EventsView
-      events = {this.props.events}
-      onEventPress = {this.props.handleEventPress}
-    />
+    if (this.props.errorMessage) {
+      return (
+        <View>
+          <Text style={styles.errorMessage}>{this.props.errorMessage}</Text>
+        </View>
+      )
+    }
+    return (
+      <View>
+        <ActivityIndicator
+          style={styles.loadingIndicator}
+          animating={this.props.isLoading}
+        />
+        <EventsView
+          events={this.props.events}
+          onEventPress={this.props.handleEventPress}
+        />
+      </View>
+    )
   }
 })
 

@@ -80,7 +80,7 @@ function fetchData (dispatch, diskStore, lastModified) {
       loadComplete(dispatch, data)
     }
   }).catch(error => {
-    console.error(error)
+    console.log(error)
     return loadFromDisk(dispatch, diskStore)
   })
 }
