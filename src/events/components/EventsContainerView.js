@@ -1,8 +1,8 @@
-import React, {PropTypes} from 'react';
+import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
 import EventsView from './EventsView'
 import EventView from './EventView'
-import {ActivityIndicator, View, Text} from 'react-native';
+import {ActivityIndicator, View, Text} from 'react-native'
 import styles from '../../styles/EventViewStyles'
 
 const EventsContainerView = React.createClass({

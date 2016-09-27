@@ -1,5 +1,5 @@
-import React, {PropTypes} from 'react';
-import {View, Navigator, BackAndroid, StyleSheet} from 'react-native';
+import React, {PropTypes} from 'react'
+import {View, Navigator, BackAndroid, StyleSheet} from 'react-native'
 import {loadData} from './actionCreators'
 import {connect} from 'react-redux'
 import appRoutes from './appRoutes'

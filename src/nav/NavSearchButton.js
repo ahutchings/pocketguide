@@ -1,5 +1,5 @@
-import React, {PropTypes} from 'react';
-import {Image, TextInput, TouchableOpacity} from 'react-native';
+import React, {PropTypes} from 'react'
+import {Image, TextInput, TouchableOpacity} from 'react-native'
 import {connect} from 'react-redux'
 import styles from '../styles/NavBarStyles'
 
