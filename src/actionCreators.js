@@ -1,11 +1,11 @@
 // android emulator url:
 // const URL = 'http://10.0.2.2:3000/api/mobile'
 
-//genymotion emulator url:
+// genymotion emulator url:
 // const URL = 'http://10.0.3.2:3000/api/mobile'
 
 // ios local url:
-// const URL = 'http://10.0.2.2:3000/api/mobile'
+// const URL = 'http://127.0.0.1:3000/api/mobile'
 
 // heroku url:
 const URL = 'http://pocketguide-web-server.herokuapp.com/api/mobile'
