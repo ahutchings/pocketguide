@@ -22,8 +22,8 @@ function defaultState () {
     annotations: [],
     staticAnnotations: staticAnnotations,
     center: {
-      latitude: 33.378917,
-      longitude: -83.337274
+      latitude: 33.480632,
+      longitude: -85.269295
     },
     zoomLevel: 15,
     selectedEvent: null,
