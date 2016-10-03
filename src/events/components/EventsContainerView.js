@@ -32,7 +32,7 @@ const EventsContainerView = React.createClass({
       )
     }
     return (
-      <View>
+      <View style={{flex: 1}}>
         <ActivityIndicator
           style={styles.loadingIndicator}
           animating={this.props.isLoading}

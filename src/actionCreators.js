@@ -5,7 +5,7 @@
 // const URL = 'http://10.0.3.2:3000/api/mobile'
 
 // ios local url:
-// const URL = 'http://127.0.0.1:3000/api/mobile'
+// const URL = 'http://localhost:3000/api/mobile'
 
 // heroku url:
 const URL = 'http://pocketguide-web-server.herokuapp.com/api/mobile'
@@ -59,9 +59,7 @@ function loadComplete (dispatch, data) {
 function fetchData (dispatch, diskStore, lastModified) {
   return fetch(URL, {
     timeout: 10000,
-    headers: {
-      'Last-Modified': lastModified
-    }
+    headers: getHeaders(lastModified)
   }).then(response => {
     const status = response.status
     if (response.ok) {
@@ -83,6 +81,13 @@ function fetchData (dispatch, diskStore, lastModified) {
     console.log(error)
     return loadFromDisk(dispatch, diskStore)
   })
+}
+
+function getHeaders (lastModified) {
+  if (lastModified === null) return {}
+  return {
+    'Last-Modified': lastModified
+  }
 }
 
 function writeToDisk (data, diskStore) {

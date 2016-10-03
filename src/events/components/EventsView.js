@@ -18,7 +18,6 @@ const styles = {
     fontWeight: 'bold',
     flex: 1
   },
-
   descriptionText: {
     color: GENERAL_FONT,
     flex: 2
@@ -34,6 +33,7 @@ export default React.createClass({
   render () {
     return (
       <ListView
+        enableEmptySections
         dataSource={this._createDataSource()}
         renderRow={this._renderRow}
       />
