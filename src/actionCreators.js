@@ -19,10 +19,9 @@ export function loadData () {
       type: 'data:load'
     })
 
-    return netInfo.isConnected.fetch().then(isConnected => {
-      if (!isConnected) {
-        return loadFromDisk(dispatch, diskStore)
-      }
+    netInfo.addEventListener('change', isConnected => {
+      if (!isConnected) return loadFromDisk(dispatch, diskStore)
+
       return diskStore.get(LAST_MODIFIED).then(lastModified => {
         return fetchData(dispatch, diskStore, lastModified)
       }).catch(error => {
@@ -78,7 +77,7 @@ function fetchData (dispatch, diskStore, lastModified) {
       loadComplete(dispatch, data)
     }
   }).catch(error => {
-    console.log(error)
+    console.error(error)
     return loadFromDisk(dispatch, diskStore)
   })
 }
