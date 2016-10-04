@@ -13,10 +13,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignSelf: 'center',
     color: GENERAL_FONT,
-    marginBottom: 15
+    marginBottom: 20
   },
   eventDesc: {
     flex: 2,
+    alignSelf: 'center',
     color: GENERAL_FONT
   },
   times: {
