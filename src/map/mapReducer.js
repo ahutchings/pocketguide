@@ -65,14 +65,7 @@ function buildEventAnnotations (events) {
         id: `${event.id}`,
         type: 'point',
         title: event.name,
-        coordinates: event.coordinates,
-        annotationImage: {
-          source: {
-            uri: 'pin'
-          },
-          width: 30,
-          height: 70
-        }
+        coordinates: event.coordinates
       }
     })
 }
