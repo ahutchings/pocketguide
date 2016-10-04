@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "pocketguide.app"
+               BuildableName = "Alchemy 2016.app"
                BlueprintName = "pocketguide"
                ReferencedContainer = "container:Alchemy 2016.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "pocketguide.app"
+            BuildableName = "Alchemy 2016.app"
             BlueprintName = "pocketguide"
             ReferencedContainer = "container:Alchemy 2016.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "pocketguide.app"
+            BuildableName = "Alchemy 2016.app"
             BlueprintName = "pocketguide"
             ReferencedContainer = "container:Alchemy 2016.xcodeproj">
          </BuildableReference>
@@ -99,7 +99,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "pocketguide.app"
+            BuildableName = "Alchemy 2016.app"
             BlueprintName = "pocketguide"
             ReferencedContainer = "container:Alchemy 2016.xcodeproj">
          </BuildableReference>
@@ -110,6 +110,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "pocketguide"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
